@@ -63,8 +63,8 @@ findHome() {
     (cd -P "$(dirname "$source")/.." && pwd)
 }
 KONAN_HOME="$(findHome)"
-
 NATIVE_LIB="${KONAN_HOME}/konan/nativelib"
+
 java_opts=(-ea \
     "-Djava.library.path=${NATIVE_LIB}" \
     "-Dkonan.home=${KONAN_HOME}" \
