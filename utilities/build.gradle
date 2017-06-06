@@ -25,9 +25,6 @@ buildscript {
 }
 
 apply plugin: 'kotlin'
-apply plugin: 'application'
-
-mainClassName = "org.jetbrains.kotlin.cli.utilities.MainKt"
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
