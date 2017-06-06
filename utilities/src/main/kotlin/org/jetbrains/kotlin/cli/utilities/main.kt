@@ -3,6 +3,7 @@ package org.jetbrains.kotlin.cli.utilities
 import java.io.File
 import org.jetbrains.kotlin.cli.bc.main as konancMain
 import org.jetbrains.kotlin.native.interop.gen.jvm.main as cinteropMain
+import org.jetbrains.kotlin.cli.klib.main as klibMain
 
 fun invokeCinterop(args: Array<String>) {
     var outputFileName = "nativelib"
@@ -47,9 +48,9 @@ fun main(args: Array<String>) {
         "cinterop" ->
             invokeCinterop(utilityArgs)
         "klib" ->
-            println("would run: klib $utilityArgs")
+            klibMain(utilityArgs)
         else ->
-            println("Unexpected utility name")
+            error("Unexpected utility name")
     }
 }
 
