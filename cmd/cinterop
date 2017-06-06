@@ -17,4 +17,4 @@
 DIR="${BASH_SOURCE[0]%/*}"
 : ${DIR:="."}
 
-"${DIR}"/konan_run cinterop "$@"
+"${DIR}"/run_konan cinterop "$@"
