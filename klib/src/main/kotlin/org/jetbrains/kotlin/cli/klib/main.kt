@@ -63,7 +63,7 @@ class Library(val name: String, val repository: String, val target: String) {
     val file = File(name)
     val repositoryFile = File(repository)
 
-    // TODO: neet do something here.
+    // TODO: need to do something here.
     val currentAbiVersion = 1
 
     val splitLibrary = SplitLibraryReader(file, currentAbiVersion, target)
