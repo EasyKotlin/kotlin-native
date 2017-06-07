@@ -83,9 +83,8 @@ HELPERS_JAR="${KONAN_HOME}/konan/lib/helpers.jar"
 KLIB_JAR="${KONAN_HOME}/konan/lib/klib.jar"
 UTILITIES_JAR="${KONAN_HOME}/konan/lib/utilities.jar"
 KONAN_CLASSPATH="$KOTLIN_JAR:$INTEROP_JAR:$STUB_GENERATOR_JAR:$INTEROP_INDEXER_JAR:$KONAN_JAR:$HELPERS_JAR:$KLIB_JAR:$UTILITIES_JAR"
-#KONAN_COMPILER=org.jetbrains.kotlin.cli.bc.K2NativeKt
-KONAN_COMPILER=org.jetbrains.kotlin.cli.utilities.MainKt
+TOOL_CLASS=org.jetbrains.kotlin.cli.utilities.MainKt
 
 LIBCLANG_DISABLE_CRASH_RECOVERY=1 \
-"$JAVACMD" "${java_opts[@]}" "${java_args[@]}" -cp "$KONAN_CLASSPATH" "$KONAN_COMPILER" "$TOOL_NAME" "${konan_args[@]}"
+"$JAVACMD" "${java_opts[@]}" "${java_args[@]}" -cp "$KONAN_CLASSPATH" "$TOOL_CLASS" "$TOOL_NAME" "${konan_args[@]}"
 
